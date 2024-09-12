@@ -1,0 +1,63 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+#mision {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;   
+}
+
+#perfiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+#perfiles .card{
+    box-shadow: 0 0 10px 0 #703493;
+}
+
+#h {
+    width: 210px;
+}
+
+img:hover {
+    transform:translateY(-6px);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform:scale(104%);
+    transition: 1.5s;
+}
+
+#ocultar {
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.card:hover #ocultar{
+    display: block;
+    zoom: 85%;    
+}
+
+.row {
+    position: relative;
+}
