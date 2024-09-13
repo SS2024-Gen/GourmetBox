@@ -1,3 +1,4 @@
+/* Fuente general poppins */
 * {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -5,12 +6,14 @@
 
 }
 
+/* aplica fuente a titulos roboto */
 h1, h2, h3, h4, h5 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
+/* configura border a tarjeta y alineado y redondez */
 .card {
     margin-bottom: 10px;
     margin-top: 5px;
@@ -18,46 +21,73 @@ h1, h2, h3, h4, h5 {
     border-radius: 20px;
 }
 
+/* mision vision y valores flex y espacion entre cards y row  */
 #mision {
     display: flex;
-    justify-content: space-between;
-    margin: 15px;   
+    justify-content:space-around;  
 }
 
+/* distribuir las cards en el area row y espacio */
 #perfiles {
     display: flex;
     justify-content: space-around;
     margin: 10px;
 }
 
+/* borde sombreado de las card del equipo */
 #perfiles .card{
     box-shadow: 0 0 10px 0 #703493;
 }
 
+/* aplicar tamaño a foto de los chikos */
 #h {
     width: 210px;
 }
 
-img:hover {
-    transform:translateY(-6px);
-    transition: 0.5s;
-}
-
+/* se realiza una aproximacion del div efecto visual */
 .card:hover {
     transform:scale(104%);
     transition: 1.5s;
 }
 
+/* se le agrega al div de la descripcion de perfil de cada colaborador oculto a la vista */
 #ocultar {
     display: none;
     transition: opacity 0.3s;
 }
 
+/* si el mouse pasa por la tarjeta se quita la imagen */
+.card:hover img{
+    display: none;
+} 
+
+/* si el mouse pasa por la tarjeta se muestra la informacion del div */
 .card:hover #ocultar{
     display: block;
-    zoom: 85%;    
+    zoom: 85%;  
 }
 
-.row {
-    position: relative;
+/* se le da un tamaño a las tarjetas de los colaboradores*/
+#perfiles .card {
+ height: 25rem;
+ width: 18rem;
+}
+
+/* le alinean los links de github y portafolio */
+#links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* titulo de equipos centrado y con espacio arriba y abajo */
+.softSinfoni{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #703493;
+}
+
+/* se pone color a los titulos */
+.card-title {
+    color: #703493;
 }
