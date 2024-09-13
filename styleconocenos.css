@@ -45,29 +45,30 @@ h1, h2, h3, h4, h5 {
     width: 210px;
 }
 
-/* se realiza una aproximacion del div efecto visual */
+/* 
+se realiza una aproximacion del div efecto visual
 .card:hover {
     transform:scale(104%);
     transition: 1.5s;
 }
 
-/* se le agrega al div de la descripcion de perfil de cada colaborador oculto a la vista */
+se le agrega al div de la descripcion de perfil de cada colaborador oculto a la vista
 #ocultar {
     display: none;
     transition: opacity 0.3s;
 }
 
-/* si el mouse pasa por la tarjeta se quita la imagen */
+si el mouse pasa por la tarjeta se quita la imagen
 .card:hover img{
     display: none;
 } 
 
-/* si el mouse pasa por la tarjeta se muestra la informacion del div */
+si el mouse pasa por la tarjeta se muestra la informacion del div 
 .card:hover #ocultar{
     display: block;
     zoom: 85%;  
 }
-
+*/
 /* se le da un tamaño a las tarjetas de los colaboradores*/
 #perfiles .card {
  height: 25rem;
@@ -96,4 +97,26 @@ h1, h2, h3, h4, h5 {
 #footer {
    text-align: center;
    background-image: url('./img/footer (1).png');
+}
+
+/* se realiza efecto de cards doble contenido */
+
+#perfiles .card {
+    transition: transform 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-style: preserve-3d;
+}
+
+#perfiles .card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    visibility: hidden;
 }
