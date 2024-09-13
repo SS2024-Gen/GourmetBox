@@ -3,6 +3,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    box-sizing: border-box;
 
 }
 
@@ -90,4 +91,9 @@ h1, h2, h3, h4, h5 {
 /* se pone color a los titulos */
 .card-title {
     color: #703493;
+}
+
+#footer {
+   text-align: center;
+   background-image: url('./img/footer (1).png');
 }
