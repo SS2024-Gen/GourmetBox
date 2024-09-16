@@ -214,3 +214,25 @@ para arriba que para abajo, de esta manera se quita un bug de salto imagen */
 }
 
 
+
+/* Oculta la flecha y desactiva el botón en pantallas grandes */
+@media (min-width: 992px) { 
+    .accordion-button::after {
+      display: none; 
+    }
+    .accordion-button {
+      pointer-events: none; 
+      
+    }
+  }
+  
+  /* Muestra la flecha y habilita el botón en pantallas pequeñas */
+  @media (max-width: 991px) { 
+    .accordion-button::after {
+      display: inline-block; 
+    }
+    .accordion-button {
+      pointer-events: auto; 
+      opacity: 1;
+    }
+  }
