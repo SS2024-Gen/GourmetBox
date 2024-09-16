@@ -1,0 +1,214 @@
+/* Fuente general poppins */
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+/* aplica fuente a titulos roboto */
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* configura border a tarjeta y alineado y redondez */
+.card {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+/* mision vision y valores flex y espacion entre cards y row  */
+#mision {
+    display: flex;
+    justify-content:space-around;  
+}
+
+/* distribuir las cards en el area row y espacio */
+#perfiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+/* borde sombreado de las card del equipo */
+#perfiles .card{
+    box-shadow: 0 0 10px 0 #703493;
+}
+
+/* aplicar tamaño a foto de los chikos */
+#h {
+    width: 210px;
+}
+
+/* se le da un tamaño a las tarjetas de los colaboradores*/
+#perfiles .card {
+ height: 25rem;
+ width: 18rem;
+}
+
+/* le alinean los links de github y portafolio */
+.links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* titulo de equipos centrado y con espacio arriba y abajo */
+.softSinfoni{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #703493;
+}
+
+/* se pone color a los titulos dentro de la cards*/
+.card-title {
+    color: #703493;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-image: url('./img/footer (1).png');
+    width: 100%;
+    height: 50px;
+}
+
+.footerText p{
+    -webkit-text-stroke: 0.8px #703493;
+}
+
+.footerText {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 310px;
+    text-align: center;
+    height: 49px;
+    border-radius: 90px;
+}
+
+
+
+/* se realiza efecto de cards doble contenido */
+
+
+/* permite tener un estado inicial 
+tener presente que deben estar el div externo y div de card
+en un estado inicial*/
+#perfiles .card-body {
+    transform-style: preserve-3d; /* Habilita el efecto 3D */
+    transform: rotateY(0deg); /* Estado inicial */
+}
+
+/* la cara inicialmente atras se pone 90 para 
+ajustar el texto en el div y que no comience en margen
+0*/
+.card-back {
+    width: 90%;
+    transform: rotateY(180deg);
+}
+
+/* Permite dar un giro en 3d al contenedor exterior tarjeta */
+#perfiles .card {
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: 0 4px 20px #703493;
+    transform-style: preserve-3d;
+}
+
+/* Cuando se pase el cursor sobre el div card esete gira */
+#perfiles .card:hover {
+    transform: rotateY(180deg);
+}
+
+/* Permite ocultar la cara cuando se voltea 
+    y se bloquea el div para que el contenido que se
+        muestra no se desplace "Esta encima"*/
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* 
+se le da un color de fondo y color al texto blanco
+se divide la estructura en dos div cada uno con 50% espacio 
+y se otorga superposion a todo y se le da un tiempo para traslucido */
+.navbar {
+    background-color: #6A5BC7;
+    color: white;
+    display: flex;
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: 1s ease;
+}
+
+/* Da espaciado para que los links esten a la izq */
+.logo {
+    margin-right: 50%;
+}
+
+
+/* Se da la caracteristica de traslucido solo se aplicara segun funcion event scroll
+en js */
+.navbar.translucent {
+    background-color: rgba(106,91,199, 0.5); /* Color de fondo translúcido */
+}
+/* 
+SLATE BLUE #6A5BC7 - RGB (106,91,199)
+MOSS GREEN #869639 - RGB (134, 150, 57)
+REBECCA PURPLE #70349E - RBG ()
+ */
+
+/* el contenedor tendra sus items en forma uno al lado del otro
+y espacio entre ellos de 10px */
+.links-navbar {
+    align-items: center;
+    gap: 10px;
+}
+
+/* cuando pase el cursos este se agranda un poco y tiene lineado */
+.nav-item:hover{
+    text-decoration: underline;
+    transform: scale(105%);
+}
+
+/* como la barra ocupa cierto tamaño designamos al div nosotros
+un margen para que este se muestre despues del nav */
+#nosotros {
+    margin-top: 95px;
+}
+
+/* 
+animacion llamada show
+cuando se inicia las imagenes son opacas y pequeñas
+y acuando llegan al viewport claras y tamaño normal */
+@keyframes show{
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+/* se le el un nombre al viewtimin y estara enlazado 
+al scroll en vertical y enlazamos el scroll y el elemento que 
+vamos animar */
+#perfiles, .softSinfoni {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+/* estilizamos que se muestre la animacion al 25 apenas se muestre en pantalla
+y al 30 se vera completa, y con animation-fiil-mode se ve de igual manera 
+para arriba que para abajo, de esta manera se quita un bug de salto imagen */
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}

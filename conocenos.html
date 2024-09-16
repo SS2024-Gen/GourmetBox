@@ -3,14 +3,300 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styleconocenos.css" />
+
+    <!-- libreria bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- adjuntando fuentes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- relacionando el estilo -->
+    <link rel="stylesheet" href="styleconocenos.css" />
+
+    <title>Sobre_Nosotros</title>
   </head>
   <body>
-    <header>jdfvhjdfhjdjhdhjgdjhfgdjf</header>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="logo">
+          <a href="#">
+            <img src="/img/LOGO.png" alt="logo" width="50px" height="50px"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="links-navbar collapse navbar-collapse"
+          id="navbarNavAltMarkup"
+        >
+          <a class="nav-item nav-link active" href="#">Inicio</a>
+          <a class="nav-item nav-link" href="#">Menu</a>
+          <a class="nav-item nav-link" href="#">Suscripcion</a>
+          <a class="nav-item nav-link" href="#">Conocenos</a>
+          <a class="nav-item nav-link" href="#">Contactenos</a>
+          <a class="nav-item nav-link" href="#">Ingresar</a>
+          <a class="nav-item nav-link" href="#">
+            <img
+              id="car"
+              src="./img/car.png"
+              alt=""
+              width="40px"
+              height="40px"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
 
-    <main></main>
+    <div class="container">
+      <div class="row">
+        <!-- card de nosotros -->
+        <div class="card" id="nosotros">
+          <div class="card-body">
+            <h5 class="card-title">Sobre Nosotros</h5>
+            <p class="card-text">
+              En Software Sinfoni, somos un equipo apasionado de desarrolladores
+              de software dedicados a innovar en el mundo digital. Hemos creado
+              Gourmet Box, una plataforma de comidas por suscripción que
+              transforma la experiencia gastronómica en algo único y
+              conveniente. Nuestra misión es ofrecerte una selección curada de
+              delicias culinarias, entregadas directamente a tu puerta. Con
+              Gourmet Box, cada comida es una sinfonía de sabor y calidad.
+              ¡Únete a nosotros y descubre una nueva forma de disfrutar la buena
+              comida!
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <footer></footer>
+      <!-- contenedor de mision vision y valores -->
+      <div class="row" id="mision">
+        <div class="card" style="width: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Mision</h5>
+            <p class="card-text">
+              En Software Sinfoni, nuestra misión es transformar la experiencia
+              de la alimentación diaria mediante soluciones tecnológicas
+              innovadoras. Nos dedicamos a diseñar y desarrollar un e-commerce
+              de paquetes de comidas por suscripción que no solo simplifica el
+              proceso de planificación y adquisición de alimentos, sino que
+              también promueve una alimentación equilibrada y conveniente.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Vision</h5>
+            <p class="card-text">
+              Revolucionar la forma en que disfrutas de la comida, ofreciendo
+              una experiencia culinaria premium a través de una plataforma de
+              suscripción innovadora. Queremos llevarte una selección exclusiva
+              de comidas gourmet directamente a tu puerta, transformando cada
+              comida en un momento especial. ¡Con Gourmet Box, la excelencia
+              gastronómica es solo un clic de distancia!
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">Valores</h5>
+            <p class="card-text">
+              En Gourmet Box, valoramos la calidad y frescura en cada entrega,
+              la conveniencia de una experiencia sin complicaciones y el
+              compromiso con la satisfacción del cliente. Creemos en ofrecer una
+              selección culinaria exquisita que eleva cada comida a un nivel
+              superior, garantizando siempre excelencia y placer en cada bocado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- titulo de perfiles -->
+      <div class="softSinfoni">
+        <h3>Equipo Software Sinfoni</h3>
+      </div>
+
+      <!-- contenedor de las card perfiles de colaboradores -->
+      <div class="row" id="perfiles">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-front">
+              <h5 class="card-title">Maria Fernanda Saavedra</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Frontend</h6>
+              <img
+                class="rounded-circle"
+                src="./img/avatarMAfe.jfif"
+                alt="Card image cap"
+              />
+              <div class="links">
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Portafolio</a>
+              </div>
+            </div>
+            <div class="card-back" id="ocultar">
+              <p class="card-text">
+                me especializo en desarrollar soluciones frontend que fusionan
+                diseño atractivo con una experiencia de usuario fluida. Me
+                apasiona crear interfaces intuitivas y visualmente impactantes
+                que hagan que cada interacción sea memorable. Con un enfoque en
+                las últimas tecnologías y tendencias, transformo ideas en
+                aplicaciones web excepcionales
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="card-front">
+              <h5 class="card-title">Rafael Arteaga</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Backend</h6>
+              <img
+                id="h"
+                class="rounded-circle"
+                src="./img/avatarHombres.png"
+                alt="Card image cap"
+              />
+              <div class="links">
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Portafolio</a>
+              </div>
+            </div>
+            <div class="card-back" id="ocultar">
+              <p class="card-text">
+                me especializo en construir y optimizar la infraestructura que
+                impulsa aplicaciones robustas y escalables. Me apasiona resolver
+                problemas complejos y asegurar que la lógica de negocio y los
+                datos fluyan de manera eficiente. Mi objetivo es crear
+                soluciones backend sólidas que respalden una experiencia de
+                usuario impecable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="card-front">
+              <h5 class="card-title">Yordy Stiwar Torres</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Tester</h6>
+              <img
+                id="h"
+                class="rounded-circle"
+                src="./img/avatarHombres.png"
+                alt="Card image cap"
+              />
+              <div class="links">
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Portafolio</a>
+              </div>
+            </div>
+            <div class="card-back" id="ocultar">
+              <p class="card-text">
+                Como ingeniero mecatrónico convertido en desarrollador de
+                backend, mi pasión radica en construir sistemas robustos que
+                combinan precisión y eficiencia. Mi objetivo es fusionar la
+                ingeniería con la programación para crear una infraestructura
+                sólida y confiable que respalde aplicaciones innovadoras.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="card-front">
+              <h5 class="card-title">John Forero</h5>
+              <h6 class="card-subtitle mb-2 text-muted">QA</h6>
+              <img
+                id="h"
+                class="rounded-circle"
+                src="./img/avatarHombres.png"
+                alt="Card image cap"
+              />
+              <div class="links">
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Portafolio</a>
+              </div>
+            </div>
+            <div class="card-back" id="ocultar">
+              <p class="card-text">
+                Como desarrollador fullstack, me dedico a crear soluciones
+                integrales que combinan tanto el frontend como el backend con un
+                enfoque creativo. Me apasiona transformar ideas complejas en
+                aplicaciones funcionales y elegantes. Mi dedicación y
+                creatividad me permiten construir experiencias digitales
+                completas y eficientes que superan las expectativas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="card-front">
+              <h5 class="card-title">Eduard Andres Idrobo</h5>
+              <h6 class="card-subtitle mb-2 text-muted">ScrumMaster</h6>
+              <img
+                id="h"
+                class="rounded-circle"
+                src="./img/avatarHombres.png"
+                alt="Card image cap"
+              />
+              <div class="links">
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Portafolio</a>
+              </div>
+            </div>
+            <div class="card-back" id="ocultar">
+              <p class="card-text">
+                Como desarrollador fullstack con un enfoque en backend, me
+                apasiona construir la arquitectura que impulsa aplicaciones
+                sólidas y eficientes. Mi dedicación se refleja en cada línea de
+                código que escribo, asegurando una integración perfecta y un
+                rendimiento óptimo. Me enfoco en los detalles para garantizar
+                que la lógica de negocio y la gestión de datos sean precisas y
+                confiables.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footerText">
+        <p>Gourmet Box 2024<br />Desing & Created By Software Sinfoni</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
